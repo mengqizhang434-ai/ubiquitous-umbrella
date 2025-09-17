@@ -1,0 +1,80 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "gushan",
+        "title": "孤山御苑",
+        "era": "南宋",
+        "summary": "孤山皇城司与御花园遗址，承载临安皇城仪制。",
+        "media": ["/assets/gushan.jpg"],
+        "refs": ["《南宋宫城志》"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.1506, 30.2597]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "qianwang",
+        "title": "钱王射潮处",
+        "era": "吴越",
+        "summary": "相传吴越王钱镠射潮，彰显治水与军事威望。",
+        "media": ["/assets/qianwang.jpg"],
+        "refs": ["《钱王射潮碑》"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.172, 30.249]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "liangzhu-museum",
+        "title": "良渚博物院",
+        "era": "当代",
+        "summary": "以现代建筑语言展示良渚文明，连接史前与当代。",
+        "media": ["/assets/liangzhu-museum.jpg"],
+        "refs": ["《良渚古城遗址公园导览》"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.998, 30.421]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "nanxun-gate",
+        "title": "南宋城门遗迹",
+        "era": "南宋",
+        "summary": "勾践旧地上重建的城门，见证南宋城市规划。",
+        "media": ["/assets/southern-gate.jpg"],
+        "refs": ["《临安城坊巷考》"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.167, 30.244]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "canal-square",
+        "title": "运河文化广场",
+        "era": "当代",
+        "summary": "运河沿线公共文化空间，呈现宋韵新生活。",
+        "media": ["/assets/canal-square.jpg"],
+        "refs": ["《杭州运河文化带建设规划》"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.147, 30.326]
+      }
+    }
+  ]
+}
