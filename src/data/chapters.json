@@ -1,0 +1,82 @@
+[
+  {
+    "id": "liangzhu",
+    "title": "良渚水乡·文明发端",
+    "era": "良渚文明 (公元前3300-2300)",
+    "summary": "水网密布的良渚先民以稻作、玉器与水利为核心，奠定杭州的水城基因。",
+    "focus": {
+      "coordinates": [120.003, 30.422],
+      "zoom": 11.2,
+      "pitch": 45,
+      "bearing": -10
+    },
+    "media": [
+      "/assets/liangzhu-jade.jpg",
+      "/assets/liangzhu-dam.jpg",
+      "/assets/liangzhu-rice.jpg"
+    ],
+    "refs": [
+      "《良渚古城遗址申报文本》", "杭州考古所《良渚古城水利系统研究》"
+    ]
+  },
+  {
+    "id": "wuyue",
+    "title": "吴越遗脉·钱塘筑城",
+    "era": "吴越国 (907-978)",
+    "summary": "钱塘江畔的筑城与海塘工程奠定江湖海交汇的城市格局。",
+    "focus": {
+      "coordinates": [120.173, 30.250],
+      "zoom": 11.8,
+      "pitch": 50,
+      "bearing": 20
+    },
+    "media": [
+      "/assets/wuyue-dike.jpg",
+      "/assets/wuyue-temple.jpg",
+      "/assets/wuyue-silk.jpg"
+    ],
+    "refs": [
+      "《吴越钱塘江治水志》", "浙江省博物馆《吴越简帛文献》"
+    ]
+  },
+  {
+    "id": "southern-song",
+    "title": "南宋行在·皇城风雅",
+    "era": "南宋 (1127-1279)",
+    "summary": "临安城内坊巷棋布、官仓商铺并立，礼乐、书画与茶事交织出宋韵生活。",
+    "focus": {
+      "coordinates": [120.16, 30.257],
+      "zoom": 12.7,
+      "pitch": 60,
+      "bearing": -30
+    },
+    "media": [
+      "/assets/song-palace.jpg",
+      "/assets/song-market.jpg",
+      "/assets/song-tea.jpg"
+    ],
+    "refs": [
+      "《梦梁录》", "南宋史研究会《临安城坊巷考》"
+    ]
+  },
+  {
+    "id": "modern",
+    "title": "当代活化·宋韵新生",
+    "era": "当代杭州",
+    "summary": "大运河沿线的文化更新项目，让宋式美学在城市公共生活中延展。",
+    "focus": {
+      "coordinates": [120.15, 30.30],
+      "zoom": 12.4,
+      "pitch": 55,
+      "bearing": 15
+    },
+    "media": [
+      "/assets/modern-canal.jpg",
+      "/assets/modern-museum.jpg",
+      "/assets/modern-community.jpg"
+    ],
+    "refs": [
+      "杭州市政府《大运河世界文化遗产保护管理规划》", "杭州市文旅局《宋韵文化传承发展三年行动计划》"
+    ]
+  }
+]

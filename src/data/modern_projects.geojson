@@ -1,0 +1,35 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "canal-museum",
+        "title": "中国大运河博物馆（杭州馆）",
+        "era": "当代",
+        "summary": "展示运河文化遗产与数字化活化案例。",
+        "media": ["/assets/canal-museum.jpg"],
+        "refs": ["《大运河国家文化公园建设方案》"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.1505, 30.324]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "song-academy",
+        "title": "宋韵生活体验馆",
+        "era": "当代",
+        "summary": "以沉浸式展陈呈现宋代礼乐书画茶事。",
+        "media": ["/assets/song-life.jpg"],
+        "refs": ["《宋韵文化传承行动计划》"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.161, 30.255]
+      }
+    }
+  ]
+}
