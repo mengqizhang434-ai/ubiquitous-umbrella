@@ -18,7 +18,9 @@ npm run dev
 ```
 
 - `npm run lint`：运行 ESLint 进行代码检查。
-- `npm run build`：生成生产环境构建产物。
+- `npm run build`：生成生产环境构建产物（输出至 `docs/` 目录，可直接双击打开 `docs/index.html` 预览）。
+
+> 📦 **无需启动服务器也能体验**：仓库内已包含 `docs/` 静态站点目录，只需在浏览器中打开 `docs/index.html` 即可查看完整应用，无需额外构建或命令行操作。
 
 ## 🧩 技术栈
 
