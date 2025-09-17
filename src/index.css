@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family: 'LXGW WenKai Screen', 'Noto Sans SC', system-ui, sans-serif;
+}
+
+body {
+  @apply bg-ink-50 text-ink-900 antialiased;
+}
+
+a {
+  @apply text-ink-600 hover:text-ink-800 transition-colors;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(87, 65, 41, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.05);
+}
