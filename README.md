@@ -18,9 +18,9 @@ npm run dev
 ```
 
 - `npm run lint`：运行 ESLint 进行代码检查。
-- `npm run build`：生成生产环境构建产物（输出至 `docs/` 目录，可直接双击打开 `docs/index.html` 预览）。
+- `npm run build`：调用离线构建脚本，使用 Tailwind CLI + esbuild 生成 `docs/` 目录下的 `app.css` / `app.js`，可直接双击 `docs/index.html` 离线预览。
 
-> 📦 **无需启动服务器也能体验**：仓库内已包含 `docs/` 静态站点目录，只需在浏览器中打开 `docs/index.html` 即可查看完整应用，无需额外构建或命令行操作。
+> 📦 **无需启动服务器也能体验**：仓库内已包含以非模块脚本打包的 `docs/` 静态站点，任何现代浏览器打开 `docs/index.html`（即便是 `file://` 协议）都能正常运行。
 
 ## 🧩 技术栈
 
@@ -41,7 +41,10 @@ npm run dev
 │   ├── generator.ts              # 体裁模板与 AI 结果组装逻辑
 │   ├── types.ts                  # 数据类型定义
 │   ├── App.tsx                   # 页面主结构
-│   └── main.tsx                  # 应用入口
+│   ├── main.tsx                  # Vite 开发入口
+│   └── offline-entry.tsx         # 离线构建入口（无 ES Module 限制）
+├── scripts
+│   └── build-offline.mjs         # Tailwind + esbuild 离线打包脚本
 └── tailwind.config.js            # Tailwind 配置
 ```
 
