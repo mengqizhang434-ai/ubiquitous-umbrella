@@ -15,7 +15,7 @@
 - **地图组件**：`CanalMap` 解析 `/src/data/*.geojson` 并添加高亮层，点击点位即可弹出说明。
 - **宋式生活沙盘**：`EcoCulturalSandbox` 提供礼乐 / 书画 / 茶事 3 个滑杆，实时刷新雷达与柱状图指标。
 - **海报导出**：`PosterExport` 将当前章节的标题、卡片、日期合成 PNG，用于传播或线下展示。
-- **离线体验**：执行 `npm run build` 后生成 `docs/`，在无服务器环境下双击 `docs/index.html` 即可离线浏览。
+- **离线体验**：仓库内已附带最新 `docs/` 离线包，直接双击 `docs/index.html` 即可体验；若需更新内容，可执行 `npm run build` 重新生成。
 
 ## 开发指南
 ```bash
