@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>顶级大模型性能对比报告：DeepSeek vs GPT vs Gemini</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <div class="hero__meta">2024旗舰大模型评测</div>
+      <h1>DeepSeek、GPT-4.1 与 Gemini 1.5 Pro 全方位性能对比</h1>
+      <p class="hero__lead">综合认知推理、代码生成、多模态理解与部署成本，帮助企业和团队选择最合适的大模型解决方案。</p>
+      <div class="hero__badges">
+        <span class="badge">数据截止：2024Q1</span>
+        <span class="badge badge--outline">测试样本：18项权威基准</span>
+      </div>
+    </div>
+    <div class="hero__cards">
+      <div class="score-card score-card--primary">
+        <span class="score-card__label">综合得分</span>
+        <span class="score-card__value">92</span>
+        <span class="score-card__model">GPT-4.1 Omni</span>
+      </div>
+      <div class="score-card">
+        <span class="score-card__label">性价比冠军</span>
+        <span class="score-card__value">DeepSeek</span>
+        <span class="score-card__delta">成本 ↓45%</span>
+      </div>
+      <div class="score-card">
+        <span class="score-card__label">多模态领先</span>
+        <span class="score-card__value">Gemini 1.5</span>
+        <span class="score-card__delta">视频长上下文 2h</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--highlight">
+      <div class="section__header">
+        <h2>关键信息速览</h2>
+        <p>从核心能力、成本结构到生态支持，快速锁定最符合业务需求的模型。</p>
+      </div>
+      <div class="grid grid--stats">
+        <article class="stat-card">
+          <h3>认知推理</h3>
+          <p>GPT-4.1 在推理类基准（MMLU、GSM8K）保持领先，复杂逻辑题准确率高出 DeepSeek 6 个百分点。</p>
+          <span class="stat-card__chip">最佳选择：GPT-4.1</span>
+        </article>
+        <article class="stat-card">
+          <h3>代码生成</h3>
+          <p>DeepSeek 强化了代码专项微调，在 HumanEval 取得 90 分，且 API 成本低于 GPT 约 50%。</p>
+          <span class="stat-card__chip stat-card__chip--accent">最佳选择：DeepSeek</span>
+        </article>
+        <article class="stat-card">
+          <h3>多模态理解</h3>
+          <p>Gemini 1.5 支持原生视频与音频输入，长上下文窗口扩展到 200 万 tokens，适合内容审核与会议纪要。</p>
+          <span class="stat-card__chip stat-card__chip--gemini">最佳选择：Gemini</span>
+        </article>
+        <article class="stat-card">
+          <h3>部署与生态</h3>
+          <p>GPT-4.1 生态成熟，插件、Agent 框架与企业合规工具链完善；DeepSeek 支持本地私有化部署。</p>
+          <span class="stat-card__chip">混合部署：DeepSeek + GPT</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__header">
+        <h2>基准测试成绩</h2>
+        <p>涵盖 18 项经典指标，以下展示最受关注的 8 项基准成绩（满分 100）。</p>
+      </div>
+      <div class="benchmark">
+        <div class="benchmark__table-wrapper">
+          <table class="benchmark__table">
+            <thead>
+              <tr>
+                <th>基准</th>
+                <th>能力维度</th>
+                <th>DeepSeek</th>
+                <th>GPT-4.1</th>
+                <th>Gemini 1.5</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MMLU</td>
+                <td>知识覆盖 & 推理</td>
+                <td>86</td>
+                <td>92</td>
+                <td>88</td>
+              </tr>
+              <tr>
+                <td>GSM8K</td>
+                <td>数学推理</td>
+                <td>84</td>
+                <td>91</td>
+                <td>86</td>
+              </tr>
+              <tr>
+                <td>HumanEval+</td>
+                <td>代码生成</td>
+                <td>90</td>
+                <td>88</td>
+                <td>83</td>
+              </tr>
+              <tr>
+                <td>MBPP</td>
+                <td>编程理解</td>
+                <td>89</td>
+                <td>90</td>
+                <td>84</td>
+              </tr>
+              <tr>
+                <td>MMMU</td>
+                <td>跨模态理解</td>
+                <td>79</td>
+                <td>83</td>
+                <td>91</td>
+              </tr>
+              <tr>
+                <td>Video-Ret</td>
+                <td>长视频检索</td>
+                <td>68</td>
+                <td>74</td>
+                <td>89</td>
+              </tr>
+              <tr>
+                <td>Latency</td>
+                <td>平均响应（秒）</td>
+                <td>3.1</td>
+                <td>4.2</td>
+                <td>3.8</td>
+              </tr>
+              <tr>
+                <td>成本（USD/1M tokens）</td>
+                <td>推理成本</td>
+                <td>6</td>
+                <td>12</td>
+                <td>10</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="benchmark__chart">
+          <canvas id="radarChart" height="320"></canvas>
+          <div class="chart__caption">指标越高代表性能越好，延迟与成本采用反向归一化。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--split">
+      <div class="section__header">
+        <h2>能力画像与应用建议</h2>
+        <p>针对不同场景给出最佳模型组合策略。</p>
+      </div>
+      <div class="split">
+        <div class="split__panel">
+          <h3>行业应用矩阵</h3>
+          <ul class="usecase-list">
+            <li>
+              <span class="usecase-list__title">金融风控自动化</span>
+              <span class="usecase-list__desc">首选 DeepSeek 以获取本地部署与低成本处理；结合 GPT 审核复杂案例。</span>
+            </li>
+            <li>
+              <span class="usecase-list__title">企业知识管理</span>
+              <span class="usecase-list__desc">GPT-4.1 在长文本理解与生成品质最稳定，适合作为统一 Copilot。</span>
+            </li>
+            <li>
+              <span class="usecase-list__title">内容审核与多媒体</span>
+              <span class="usecase-list__desc">Gemini 1.5 的长视频理解和语音处理能力突出，适合UGC平台。</span>
+            </li>
+            <li>
+              <span class="usecase-list__title">研发效率提升</span>
+              <span class="usecase-list__desc">DeepSeek 代码专项表现优异，可作为内部代码助手。</span>
+            </li>
+          </ul>
+        </div>
+        <div class="split__panel split__panel--accent">
+          <h3>部署建议</h3>
+          <ol class="deployment-list">
+            <li>
+              <span class="deployment-list__title">混合架构</span>
+              <p>利用 API 网关路由请求，高价值任务交给 GPT，高频批处理交给 DeepSeek，实现成本与质量平衡。</p>
+            </li>
+            <li>
+              <span class="deployment-list__title">合规与隐私</span>
+              <p>金融、医疗等敏感行业需优先考虑可控数据流，可将 Gemini 用于非敏感多模态分析。</p>
+            </li>
+            <li>
+              <span class="deployment-list__title">团队赋能</span>
+              <p>建立提示工程（Prompt Engineering）手册与评价体系，持续监控模型漂移。</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__header">
+        <h2>成本与交付效率</h2>
+        <p>成本、吞吐与迭代速度是规模化落地的关键指标。</p>
+      </div>
+      <div class="cost">
+        <div class="cost__chart">
+          <canvas id="costChart" height="280"></canvas>
+        </div>
+        <div class="cost__insights">
+          <article class="insight">
+            <h3>推理成本</h3>
+            <p>DeepSeek 的推理成本仅 6 美元 / 百万 tokens，显著低于其他对手，有利于大规模批量生成任务。</p>
+          </article>
+          <article class="insight">
+            <h3>响应速度</h3>
+            <p>DeepSeek 在低延迟场景表现亮眼；GPT-4.1 虽延迟略高，但在复杂任务上可通过缓存与并行推理优化。</p>
+          </article>
+          <article class="insight">
+            <h3>迭代周期</h3>
+            <p>Gemini 1.5 提供跨平台 SDK 与 Vertex AI 集成，适合需要快速上线多模态应用的团队。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--conclusion">
+      <div class="section__header">
+        <h2>结论与推荐</h2>
+        <p>不同模型在细分领域有显著差异，推荐根据业务需求组合使用。</p>
+      </div>
+      <div class="conclusion">
+        <div class="conclusion__column">
+          <h3>首选策略</h3>
+          <ul>
+            <li>追求极致质量：选择 GPT-4.1 Omni 作为核心智能引擎。</li>
+            <li>关注成本效率：DeepSeek 作为主力推理模型，辅以 GPT 校验。</li>
+            <li>多模态场景：优先 Gemini 1.5，结合专用视频理解流程。</li>
+          </ul>
+        </div>
+        <div class="conclusion__column">
+          <h3>实施要点</h3>
+          <ul>
+            <li>建立统一评估指标体系，持续监控模型表现。</li>
+            <li>设计 Prompt 模版和 Guardrail，降低幻觉风险。</li>
+            <li>结合 RAG、知识库与自动化工具链提升交付效率。</li>
+          </ul>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__note">本报告基于公开基准与企业访谈整理，具体指标会随模型迭代更新。</div>
+        <div class="footer__contact">如需定制化评估，请联系 data@ai-insights.com</div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" integrity="sha384-ozOj+pnPnG3CJidFG8sS6+xcx1LBXkt90un0nLBKBPXn+wD0zAg/P53Bzu2Cev80" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
