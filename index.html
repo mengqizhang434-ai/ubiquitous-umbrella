@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>顶级通用大模型性能全景对比</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Gemini vs GPT vs DeepSeek：2025旗舰模型深度体检</h1>
+        <p>
+          通过交互式仪表盘，从性能、成本、生态、场景适配等多个维度全面审视三款最新旗舰级大模型，快速帮助团队制定模型选型策略。
+        </p>
+        <div class="hero-actions">
+          <button class="primary" id="recommendationBtn">智能选型推荐</button>
+          <button class="secondary" id="exportBtn">导出对比摘要</button>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="label">综合评分领先</span>
+          <strong id="topModelLabel">-</strong>
+          <small>基于最新基准数据动态计算</small>
+        </div>
+        <div class="stat-card">
+          <span class="label">平均推理成本 (1M token)</span>
+          <strong id="avgCost">-</strong>
+          <small>实时折算为美元</small>
+        </div>
+        <div class="stat-card">
+          <span class="label">数据更新时间</span>
+          <strong>2025 Q1</strong>
+          <small>持续跟踪最新公开基准</small>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="cards" id="modelOverview"></section>
+
+      <section class="panel">
+        <header class="panel-header">
+          <h2>多维性能矩阵</h2>
+          <p>
+            支持拖动权重来动态调整最终得分，用于模拟不同业务场景下的优先级排序。
+          </p>
+        </header>
+        <div class="panel-body grid-2">
+          <div class="weights">
+            <h3>指标权重</h3>
+            <div class="weight-control" data-metric="reasoning">
+              <div>
+                <span>推理能力</span>
+                <span class="weight-value">30%</span>
+              </div>
+              <input type="range" min="10" max="50" value="30" />
+            </div>
+            <div class="weight-control" data-metric="multimodal">
+              <div>
+                <span>多模态体验</span>
+                <span class="weight-value">20%</span>
+              </div>
+              <input type="range" min="10" max="40" value="20" />
+            </div>
+            <div class="weight-control" data-metric="speed">
+              <div>
+                <span>响应速度</span>
+                <span class="weight-value">15%</span>
+              </div>
+              <input type="range" min="5" max="30" value="15" />
+            </div>
+            <div class="weight-control" data-metric="cost">
+              <div>
+                <span>成本效率</span>
+                <span class="weight-value">20%</span>
+              </div>
+              <input type="range" min="10" max="40" value="20" />
+            </div>
+            <div class="weight-control" data-metric="ecosystem">
+              <div>
+                <span>生态成熟度</span>
+                <span class="weight-value">15%</span>
+              </div>
+              <input type="range" min="5" max="30" value="15" />
+            </div>
+            <button class="primary" id="resetWeights">重置权重</button>
+          </div>
+          <div class="chart-area">
+            <canvas id="scoreChart"></canvas>
+            <div class="ranking" id="dynamicRanking"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <header class="panel-header tabs">
+          <div class="tab active" data-tab="capabilities">能力指标</div>
+          <div class="tab" data-tab="pricing">定价与速率</div>
+          <div class="tab" data-tab="ecosystem">生态配套</div>
+        </header>
+        <div class="panel-body">
+          <div class="tab-content active" id="capabilitiesTab"></div>
+          <div class="tab-content" id="pricingTab"></div>
+          <div class="tab-content" id="ecosystemTab"></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <header class="panel-header">
+          <h2>场景匹配度测算</h2>
+          <p>根据业务目标快速筛选最合适的模型，并获得实施建议。</p>
+        </header>
+        <div class="panel-body grid-2">
+          <div class="scenario-form">
+            <label>
+              目标场景
+              <select id="scenarioSelect"></select>
+            </label>
+            <label>
+              预估日请求量
+              <input
+                type="number"
+                id="requestVolume"
+                value="5000"
+                min="100"
+                step="100"
+              />
+            </label>
+            <label>
+              平均上下文长度 (tokens)
+              <input
+                type="number"
+                id="contextLength"
+                value="8000"
+                min="1024"
+                step="512"
+              />
+            </label>
+            <button class="primary" id="calcScenario">计算匹配度</button>
+          </div>
+          <div class="scenario-result" id="scenarioResult"></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <header class="panel-header">
+          <h2>路线图与合规要点</h2>
+          <p>跟踪模型迭代节奏与官方合规承诺，降低企业引入风险。</p>
+        </header>
+        <div class="panel-body timeline" id="roadmap"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        数据来源：官方发布会、技术博客、公开基准（MMLU、GSM8K、MMMU、Arena Elo
+        等）与生态开发者反馈。
+      </p>
+      <p>提示：模型能力具有快速迭代特性，本页面会根据最新信息定期更新。</p>
+    </footer>
+
+    <dialog id="recommendDialog">
+      <h3>个性化选型建议</h3>
+      <div id="recommendContent"></div>
+      <button class="secondary" id="closeDialog">关闭</button>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>

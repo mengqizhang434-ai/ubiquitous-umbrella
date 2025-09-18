@@ -1,0 +1,16 @@
+{
+  "name": "ubiquitous-umbrella",
+  "version": "1.0.0",
+  "description": "Interactive dashboard comparing Gemini, GPT, and DeepSeek models",
+  "main": "script.js",
+  "scripts": {
+    "test": "prettier --check \"**/*.{html,css,js,json,md}\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
