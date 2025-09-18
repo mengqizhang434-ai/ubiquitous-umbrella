@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI马克思升级建设方案报告</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --primary: #9a1f40;
+      --secondary: #13315c;
+      --accent: #f2a65a;
+      --bg: #f7f7f7;
+      --text: #2d2d2d;
+      --muted: #666;
+      font-size: 16px;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Noto Serif SC", "Source Han Serif", "SimSun", serif;
+      background: linear-gradient(120deg, rgba(154, 31, 64, 0.05), rgba(19, 49, 92, 0.08)), var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, rgba(154, 31, 64, 0.9), rgba(19, 49, 92, 0.9));
+      color: #fff;
+      padding: 4rem 2rem;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 20% 20%, rgba(242, 166, 90, 0.35), transparent 45%),
+        radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.3), transparent 40%),
+        radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.2), transparent 45%);
+      z-index: 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 0.1em;
+      z-index: 1;
+      position: relative;
+    }
+
+    header p {
+      margin: 1rem auto 0;
+      max-width: 52rem;
+      z-index: 1;
+      position: relative;
+      font-size: 1.05rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: -3rem auto 3rem;
+      background: #fff;
+      border-radius: 24px;
+      padding: 3rem 3.5rem;
+      box-shadow: 0 35px 60px rgba(19, 49, 92, 0.2);
+      position: relative;
+    }
+
+    section + section {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(19, 49, 92, 0.15);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: var(--secondary);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 0 12px rgba(154, 31, 64, 0.35);
+    }
+
+    h3 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+      font-size: 1.2rem;
+    }
+
+    p {
+      margin: 0 0 1rem;
+      text-align: justify;
+    }
+
+    .highlight-box {
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(154, 31, 64, 0.08), rgba(242, 166, 90, 0.08));
+      border: 1px solid rgba(154, 31, 64, 0.18);
+      padding: 1.75rem 2rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid rgba(19, 49, 92, 0.12);
+      box-shadow: 0 18px 30px rgba(19, 49, 92, 0.12);
+      padding: 1.8rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(154, 31, 64, 0.08), rgba(19, 49, 92, 0.08));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 45px rgba(19, 49, 92, 0.18);
+    }
+
+    .card:hover::after {
+      opacity: 1;
+    }
+
+    .card h4 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      color: var(--secondary);
+      position: relative;
+      z-index: 1;
+    }
+
+    .card ul {
+      margin: 0.75rem 0 0;
+      padding-left: 1.2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card li {
+      margin-bottom: 0.4rem;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    .data-table th,
+    .data-table td {
+      border: 1px solid rgba(19, 49, 92, 0.12);
+      padding: 0.85rem 1rem;
+      text-align: left;
+    }
+
+    .data-table thead {
+      background: rgba(19, 49, 92, 0.08);
+      color: var(--secondary);
+    }
+
+    .timeline {
+      position: relative;
+      margin-top: 1.5rem;
+      padding-left: 2rem;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 10px;
+      width: 2px;
+      background: linear-gradient(180deg, rgba(154, 31, 64, 0.8), rgba(19, 49, 92, 0.4));
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.8rem;
+      padding-left: 1.5rem;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -1.2rem;
+      top: 0.3rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #fff;
+      border: 3px solid var(--primary);
+      box-shadow: 0 0 0 3px rgba(154, 31, 64, 0.15);
+    }
+
+    .timeline-item h4 {
+      margin: 0;
+      font-size: 1.05rem;
+      color: var(--primary);
+    }
+
+    .timeline-item p {
+      margin: 0.4rem 0 0.2rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(19, 49, 92, 0.12);
+      color: var(--secondary);
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 3rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 3rem 1.5rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        margin: -2rem 1rem 2rem;
+        padding: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AI马克思升级建设方案报告</h1>
+    <p>浙江工商大学思想政治理论课教学部拟对“AI马克思”数据库与智能体进行全面升级，通过引入更广泛的马克思主义者著作与校内特色思政课程资源，打造权威、智慧、富有人文情怀的数字马克思主义专家。</p>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>一、项目愿景与建设目标</h2>
+      <div class="highlight-box">
+        <p><strong>核心愿景：</strong>推动“AI马克思”从基础马克思主义常识问答工具，跃升为兼具理论深度、学术广度与教学落地能力的“马克思主义资深学者”型智能体。</p>
+        <p><strong>建设目标：</strong></p>
+        <ul>
+          <li>打造覆盖马克思主义发展史、流派史与现实应用的深度知识库。</li>
+          <li>实现浙江工商大学思政教学资源的智能聚合、推送与应用。</li>
+          <li>构建多维交互场景，满足师生科研、教学、竞赛、社会服务等多元需求。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>二、现有数据库概况</h2>
+      <p>当前“AI马克思”数据库以马克思、恩格斯及中国国家领导人经典著作为核心，形成了涵盖基础理论、重要讲话、政策文件等内容的初步知识体系。</p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>资源类型</th>
+            <th>主要内容</th>
+            <th>数量概况</th>
+            <th>应用场景</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>经典原著</td>
+            <td>《资本论》《共产党宣言》《家庭、私有制和国家的起源》等</td>
+            <td>20+ 部</td>
+            <td>基础理论学习、课堂答疑</td>
+          </tr>
+          <tr>
+            <td>领导人著作</td>
+            <td>习近平总书记系列重要讲话、历届党代会报告</td>
+            <td>50+ 篇</td>
+            <td>形势政策课、思政课教学</td>
+          </tr>
+          <tr>
+            <td>制度文件</td>
+            <td>中央及地方政策文件、党内法规</td>
+            <td>30+ 项</td>
+            <td>政策解读、实践指导</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>虽然现有资源能够支撑常规的思政课堂问答，但在“多元马克思主义者研究视角”“地方高校特色教学资源融合”方面仍存在明显空白，亟需升级完善。</p>
+    </section>
+
+    <section>
+      <h2>三、升级内容与新增资源体系</h2>
+      <h3>1. 海量引入国际马克思主义者原典与研究成果</h3>
+      <div class="grid">
+        <div class="card">
+          <h4>经典人物拓展</h4>
+          <ul>
+            <li>列宁、卢森堡、普列汉诺夫、科尔施等革命理论家</li>
+            <li>葛兰西、卢卡奇、萨特、阿尔都塞等西方马克思主义代表</li>
+            <li>法兰克福学派、文化研究学派重要学者</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>资料类型扩容</h4>
+          <ul>
+            <li>原著全集、通信、会议记录、回忆录</li>
+            <li>经典译本、评注本、校勘本</li>
+            <li>学术论文、学者访谈、理论争鸣材料</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>主题专题构建</h4>
+          <ul>
+            <li>马克思主义哲学、政治经济学、科学社会主义</li>
+            <li>宗教观、文化理论、生态马克思主义</li>
+            <li>数字时代马克思主义、中国化时代化研究</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>2. 浙江工商大学特色思政课程资料入库</h3>
+      <div class="highlight-box">
+        <p><strong>本科阶段：</strong>《课说浙江》《马克思主义基本原理》《中国近现代史纲要》《思想道德与法治》《形势与政策》课程的参考书、教案、教师课件、案例库。</p>
+        <p><strong>研究生阶段：</strong>《马克思主义宗教学》《西方哲学史》《国外马克思主义研究专题》《中国马克思主义与当代》等课程的讲稿、研讨提纲、阅读书目、实践项目。</p>
+        <p><strong>特色资源：</strong>浙江红色文化数据库、校内思政课程优秀教学设计、学生实践调研报告、课程思政建设案例。</p>
+      </div>
+
+      <h3>3. 多模态与智能交互能力拓展</h3>
+      <div class="grid">
+        <div class="card">
+          <h4>知识图谱重构</h4>
+          <ul>
+            <li>构建“人物—著作—概念—事件—课程”五维知识图谱</li>
+            <li>强化概念关联、历史脉络与思想谱系分析能力</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>智能应用场景</h4>
+          <ul>
+            <li>课堂实时问答、课后拓展阅读推荐</li>
+            <li>科研写作辅助、竞赛选题与材料生成</li>
+            <li>社会实践方案设计、红色文化解说词生成</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>交互形式升级</h4>
+          <ul>
+            <li>文本、图像、音视频资源的多模态解析</li>
+            <li>与学习平台、智慧教室系统的深度对接</li>
+            <li>支持移动端、微服务端轻量化调用</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>四、资源建设路径与进度安排</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>第一阶段（2024年12月）——资源普查与标准制定</h4>
+          <p>完成现有数据库清点，制定元数据标准、分类体系与版权核查流程。</p>
+          <p>形成《AI马克思资源标准规范》与数据清洗工具链。</p>
+        </div>
+        <div class="timeline-item">
+          <h4>第二阶段（2025年1-3月）——国际马克思主义文献引入</h4>
+          <p>与国内外研究机构、出版社合作，批量导入经典学者原著、翻译与研究成果。</p>
+          <p>建立多语言文本预处理与双语语义索引机制。</p>
+        </div>
+        <div class="timeline-item">
+          <h4>第三阶段（2025年3-6月）——浙商大特色思政资源集成</h4>
+          <p>协同教务处、各课程负责人，完成课程资料数字化、结构化和权限设定。</p>
+          <p>构建“课程—知识点—案例—评价”四位一体数据模型。</p>
+        </div>
+        <div class="timeline-item">
+          <h4>第四阶段（2025年7月起）——智能体能力迭代与试点</h4>
+          <p>上线升级版AI马克思，开展课堂试点、师生反馈、持续优化迭代。</p>
+          <p>同步建设学术合作、社会服务与国际传播功能。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>五、技术路线与平台架构</h2>
+      <div class="grid">
+        <div class="card">
+          <h4>数据层</h4>
+          <ul>
+            <li>统一数据仓库：支持文本、图像、音频、视频等多模态存储。</li>
+            <li>知识图谱：采用RDF/Property Graph融合模式，支撑复杂推理。</li>
+            <li>安全控制：基于角色的访问控制与水印溯源机制。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>算法层</h4>
+          <ul>
+            <li>大模型增强：引入国产基础模型，结合LoRA微调与检索增强生成。</li>
+            <li>问答优化：构建思政领域专属Prompt模板与推理链路。</li>
+            <li>评测体系：建立理论正确性、价值导向性、教学实用性三维指标。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>应用层</h4>
+          <ul>
+            <li>教师端：智能备课、课程设计、案例库推送。</li>
+            <li>学生端：学习路径推荐、思政金课伴学、研讨辅导。</li>
+            <li>管理端：数据分析仪表盘、资源更新提醒、反馈闭环。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>六、保障措施与预期成效</h2>
+      <h3>1. 组织与制度保障</h3>
+      <p>成立“AI马克思升级建设领导小组”，下设资源建设、技术研发、教学应用、质量评估四个专项工作组，确保跨部门协同推进。</p>
+
+      <h3>2. 师资与专家支撑</h3>
+      <p>邀请马克思主义学院、公共管理学院、人文学院专家学者担任顾问，构建校内外专家评审机制，定期对资源质量与算法表现进行评估。</p>
+
+      <h3>3. 预期成效</h3>
+      <div class="tag-list">
+        <span class="tag">打造全国领先的高校马克思主义智能体标杆</span>
+        <span class="tag">构建覆盖本科与研究生全链条的思政课程资源库</span>
+        <span class="tag">显著提升思政课堂的吸引力与获得感</span>
+        <span class="tag">形成可复制、可推广的数字思政解决方案</span>
+        <span class="tag">服务学校“两个先行”与“三全育人”战略</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>七、下一步工作建议</h2>
+      <ul>
+        <li>尽快启动资源版权梳理与合作谈判，优先引入重点马克思主义者全集。</li>
+        <li>建设校内思政资源统一上传与审核平台，保证资料更新及时、口径一致。</li>
+        <li>开展试点课程共建，邀请教师参与智能体的Prompt设计与测试。</li>
+        <li>联合信息化部门，完善数据安全与隐私保护方案。</li>
+        <li>布局省内外合作高校与研究机构，形成联合创新共同体。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    浙江工商大学思想政治理论课教学部 · 2024年12月
+  </footer>
+</body>
+</html>
