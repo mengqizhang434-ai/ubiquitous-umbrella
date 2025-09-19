@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>顶级大模型全景对比：DeepSeek、GPT、Gemini</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow">2025 年第一季度市场洞察</p>
+        <h1>DeepSeek、GPT、Gemini 最新旗舰模型全面对比</h1>
+        <p class="hero__summary">
+          从能力、生态、成本、安全与企业落地五个维度，快速了解当前最受关注的
+          <span class="accent">DeepSeek-R1</span>、
+          <span class="accent">GPT-4.1</span> 和
+          <span class="accent">Gemini 1.5 Pro</span> 的真实差异。
+        </p>
+        <div class="hero__cta">
+          <a class="cta cta--primary" href="#overview">查看核心指标</a>
+          <a class="cta" href="#use-cases">匹配业务场景</a>
+        </div>
+      </div>
+      <div class="hero__badge">
+        <span>最后更新：2025-02-10</span>
+        <span>数据来源：官方文档 & 行业测评</span>
+      </div>
+    </header>
+
+    <main>
+      <section id="overview" class="section">
+        <h2>核心指标一览</h2>
+        <p class="section__lead">
+          这张对比表总结了三大模型在上下文长度、推理能力、工具生态、开放程度和
+          成本结构上的主要差别，帮助你迅速锁定最匹配的产品。
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>维度</th>
+                <th>DeepSeek-R1</th>
+                <th>GPT-4.1</th>
+                <th>Gemini 1.5 Pro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>发布时间</td>
+                <td>2025.01 · 深度求索（DeepSeek）</td>
+                <td>2024.12 · OpenAI</td>
+                <td>2025.01 · Google DeepMind</td>
+              </tr>
+              <tr>
+                <td>上下文长度</td>
+                <td>200K tokens（实验性 2M）</td>
+                <td>128K tokens</td>
+                <td>2M tokens</td>
+              </tr>
+              <tr>
+                <td>推理特长</td>
+                <td>数学、代码推演、结构化工具调用</td>
+                <td>通用推理、智能体编排、语音实时</td>
+                <td>长文档理解、多模态跨媒体推理</td>
+              </tr>
+              <tr>
+                <td>多模态能力</td>
+                <td>文本 + 图像理解</td>
+                <td>文本 + 图像 + 语音实时对话</td>
+                <td>文本 + 图像 + 视频 + 音频</td>
+              </tr>
+              <tr>
+                <td>生态工具</td>
+                <td>开源 Agent 框架、模型可私有化部署</td>
+                <td>GPTs、OpenAI Studio、丰富插件生态</td>
+                <td>Google Workspace、Vertex AI 原生集成</td>
+              </tr>
+              <tr>
+                <td>计费策略</td>
+                <td>输入 $0.7 / M tokens，输出 $0.9 / M tokens</td>
+                <td>输入 $5 / M tokens，输出 $15 / M tokens</td>
+                <td>输入 $3.5 / M tokens，输出 $10.5 / M tokens</td>
+              </tr>
+              <tr>
+                <td>开放程度</td>
+                <td>权重可商用授权，支持本地部署</td>
+                <td>闭源 SaaS，API 托管</td>
+                <td>闭源 SaaS，企业可申请专用实例</td>
+              </tr>
+              <tr>
+                <td>企业合规</td>
+                <td>国内外双重合规选项</td>
+                <td>SOC2、ISO/IEC 27001 等全球认证</td>
+                <td>支持 EU AI Act、数据驻留策略</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section section--highlight">
+        <h2>优势矩阵：谁更适合你的任务？</h2>
+        <div class="grid grid--three">
+          <article class="card">
+            <h3>DeepSeek-R1</h3>
+            <p>
+              采用强化推理的开源策略，拥有极强的代码自动补全与数学推理能力，适合
+              对成本敏感且需要私有化部署的团队。
+            </p>
+            <ul>
+              <li>推理链条可解释，方便模型调优</li>
+              <li>社区提供丰富微调权重与数据集</li>
+              <li>较低的推理成本，适合批量离线任务</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>GPT-4.1</h3>
+            <p>
+              延续 GPT-4 Turbo 的全面能力，同时在实时语音与智能体协作上有重大升级，
+              对交互体验要求高的企业极具吸引力。
+            </p>
+            <ul>
+              <li>原生支持 Realtime API 与多轮语音对话</li>
+              <li>工具调用与函数调用生态成熟</li>
+              <li>OpenAI Studio 降低团队搭建门槛</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Gemini 1.5 Pro</h3>
+            <p>
+              超长上下文与全模态输入是最大亮点，能够在单个请求中处理视频、音频和
+              文本，适合内容理解与企业知识管理场景。
+            </p>
+            <ul>
+              <li>原生连接 Google Workspace 与开发者工具</li>
+              <li>跨模态检索与摘要效果稳定</li>
+              <li>Vertex AI 支持企业级监控与治理</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="score">
+        <div class="section__header">
+          <h2>能力雷达图</h2>
+          <p>
+            评分基于公开基准测试、社区测评以及厂商发布的指标，分数越高代表越具
+            优势。将鼠标悬停在指标名称上可查看评分说明。
+          </p>
+        </div>
+        <div class="radar">
+          <div class="radar__labels">
+            <button class="tag" data-tooltip="综合评估数学、代码、指令遵循等基准成绩">
+              推理能力
+            </button>
+            <button class="tag" data-tooltip="是否支持多模态输入、输出以及实时能力">
+              多模态
+            </button>
+            <button class="tag" data-tooltip="生态插件、开发工具、社区活跃度">
+              生态成熟度
+            </button>
+            <button class="tag" data-tooltip="SLA、可观测性、合规能力">
+              企业可信度
+            </button>
+            <button class="tag" data-tooltip="综合 API 价格、推理效率、部署方式">
+              成本效率
+            </button>
+          </div>
+          <div class="radar__bars">
+            <div class="radar__row">
+              <span class="label">DeepSeek-R1</span>
+              <div class="bar" style="--score: 82%"></div>
+            </div>
+            <div class="radar__row">
+              <span class="label">GPT-4.1</span>
+              <div class="bar" style="--score: 88%"></div>
+            </div>
+            <div class="radar__row">
+              <span class="label">Gemini 1.5 Pro</span>
+              <div class="bar" style="--score: 85%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="use-cases">
+        <h2>按业务场景筛选模型</h2>
+        <p class="section__lead">
+          选择一个业务重点，我们会过滤出更适合的模型建议。你也可以点击卡片了解
+          细分推荐和落地提示。
+        </p>
+        <div class="filters">
+          <button class="filter filter--active" data-filter="all">全部</button>
+          <button class="filter" data-filter="coding">研发提效</button>
+          <button class="filter" data-filter="enterprise">企业知识/客服</button>
+          <button class="filter" data-filter="creative">多模态创作</button>
+        </div>
+        <div class="grid grid--three" id="use-case-grid">
+          <article class="card use-case" data-tags="coding enterprise">
+            <h3>工程团队代码助手</h3>
+            <p>
+              深度调试、自动补丁生成与 CI 集成需求明显时，建议优先选择
+              <strong>DeepSeek-R1</strong>（自建私有）或
+              <strong>GPT-4.1</strong>（云端实时对话）。
+            </p>
+            <ul>
+              <li>DeepSeek 权重部署可与 GitLab/Gitea 集成</li>
+              <li>GPT-4.1 支持多开发者实时结对编程</li>
+              <li>配合 API 限流策略以控制成本</li>
+            </ul>
+          </article>
+          <article class="card use-case" data-tags="enterprise">
+            <h3>企业知识库 & 客服机器人</h3>
+            <p>
+              长上下文和知识治理是关键。<strong>Gemini 1.5 Pro</strong> 的 2M tokens
+              能够吞吐更大知识库；对数据驻留有要求的企业可采用 DeepSeek 私有化方案。
+            </p>
+            <ul>
+              <li>Gemini 与 Workspace、Drive 原生互通</li>
+              <li>DeepSeek 支持向量数据库本地部署</li>
+              <li>注意搭建审计与人工兜底流程</li>
+            </ul>
+          </article>
+          <article class="card use-case" data-tags="creative">
+            <h3>多模态内容创作</h3>
+            <p>
+              需要视频、音频与图像协同创作时，<strong>Gemini 1.5 Pro</strong> 提供最
+              完整的原生支持；若重视语音实时互动则选择 <strong>GPT-4.1</strong>。
+            </p>
+            <ul>
+              <li>Gemini 支持长视频摘要与镜头脚本生成</li>
+              <li>GPT-4.1 可输出高保真语音与情绪控制</li>
+              <li>DeepSeek 图像理解可协助视觉 QA</li>
+            </ul>
+          </article>
+          <article class="card use-case" data-tags="coding creative">
+            <h3>自动化数据分析与报表</h3>
+            <p>
+              若需要将结构化数据、图像与文本综合分析，可考虑
+              <strong>Gemini 1.5 Pro</strong>。强调低成本的离线报表批处理可转向
+              <strong>DeepSeek-R1</strong>。
+            </p>
+            <ul>
+              <li>Gemini 支持视频会议记录 + 图表解析</li>
+              <li>DeepSeek 可运行在企业私有 GPU 集群</li>
+              <li>GPT-4.1 配合函数调用实现自动报表分发</li>
+            </ul>
+          </article>
+          <article class="card use-case" data-tags="enterprise coding">
+            <h3>自治智能体与流程自动化</h3>
+            <p>
+              <strong>GPT-4.1</strong> 的 Agent 框架最成熟，配合函数调用与 Workflow
+              能力；<strong>DeepSeek-R1</strong> 适合自定义场景下的多模型协同。
+            </p>
+            <ul>
+              <li>GPT-4.1 可结合 GPTs、Assistants API</li>
+              <li>DeepSeek 支持多模型混合部署策略</li>
+              <li>Gemini 在 Apps Script 场景整合便捷</li>
+            </ul>
+          </article>
+          <article class="card use-case" data-tags="creative enterprise">
+            <h3>市场与品牌内容生成</h3>
+            <p>
+              结合视觉、音频素材进行创意策划时，<strong>Gemini 1.5 Pro</strong>
+              具备更佳的多模态生成质量；实时活动直播互动可选 <strong>GPT-4.1</strong>。
+            </p>
+            <ul>
+              <li>Gemini 支持多语言多格式广告素材</li>
+              <li>GPT-4.1 可与 Realtime API 驱动直播助手</li>
+              <li>DeepSeek 适合文本脚本批量生成</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="deployment">
+        <h2>部署与成本策略建议</h2>
+        <div class="grid grid--two">
+          <div class="card">
+            <h3>成本控制</h3>
+            <ol>
+              <li>优先将高并发的批处理任务交给 DeepSeek-R1。</li>
+              <li>对实时对话交互场景采用 GPT-4.1 或 Gemini 1.5 Pro，并开启速率限制。</li>
+              <li>通过缓存、提示工程和检索增强减少上下文长度浪费。</li>
+            </ol>
+          </div>
+          <div class="card">
+            <h3>安全与合规</h3>
+            <ol>
+              <li>明确数据驻留要求，必要时采用 DeepSeek 私有化或 Gemini EU 实例。</li>
+              <li>建立模型输出审核流程，并结合厂商提供的安全过滤 API。</li>
+              <li>对敏感操作启用审计日志与密钥轮换机制。</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <h2>常见问题</h2>
+        <div class="accordion">
+          <button class="accordion__trigger">
+            如何评估模型在自有数据上的表现？
+          </button>
+          <div class="accordion__panel">
+            <p>
+              建议先构建小规模的评测数据集，覆盖典型问题，再使用统一提示词对三款
+              模型进行批量测试，并结合人工抽样标注进行对照。DeepSeek 因为支持私有
+              部署，可以直接在内部数据上调优；GPT 与 Gemini 则可使用向量检索减少数
+              据出境。
+            </p>
+          </div>
+
+          <button class="accordion__trigger">是否可以混合使用多个模型？</button>
+          <div class="accordion__panel">
+            <p>
+              可以。常见做法是在低价值请求上使用 DeepSeek-R1，在关键决策或需要多模
+              态理解的请求上调用 GPT-4.1 或 Gemini 1.5 Pro。通过路由策略或智能体编排
+              层（如 LangGraph、GraphRAG）实现自动切换。
+            </p>
+          </div>
+
+          <button class="accordion__trigger">企业如何估算年度预算？</button>
+          <div class="accordion__panel">
+            <p>
+              根据各模型的 token 单价、请求频率和平均上下文长度估算年度消耗，并为峰
+              值流量和安全治理额外预留 15%-20% 预算。建议引入监控工具实时追踪消耗并
+              调整提示策略。
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        本页资料基于 2025 年 2 月公开信息整理。建议在最终决策前再次核实厂商最新
+        公告与价格。
+      </p>
+      <p>© 2025 智能体洞察实验室</p>
+    </footer>
+  </body>
+</html>
